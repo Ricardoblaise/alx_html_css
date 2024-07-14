@@ -1,0 +1,30 @@
+@keyframes funAnimation {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.items-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.item {
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.item:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.items-row:hover .item {
+  animation: funAnimation 2s ease-in-out infinite;
+}
